@@ -85,7 +85,7 @@ public class PaymentsController : Controller
         }
         catch (DbUpdateException ex)
         {
-            ModelState.AddModelError("", "No se puede actualizar: conflicto con un pago existente.");
+            ModelState.AddModelError("", $"No se puede actualizar: conflicto con un pago existente: {ex.Message}");
             return View(payment);
         }
         catch (Exception ex)
