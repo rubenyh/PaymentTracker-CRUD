@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaymentTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0813450339659240392a29d8d2bb204026b71a1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a5412a28ae7b3793b755db4506808c9b814c180")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaymentTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaymentTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

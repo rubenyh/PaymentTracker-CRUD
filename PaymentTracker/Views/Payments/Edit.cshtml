@@ -5,6 +5,15 @@
 }
 
 <h2>Edit Payment</h2>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
 
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />

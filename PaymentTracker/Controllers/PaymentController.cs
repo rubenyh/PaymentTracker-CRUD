@@ -79,6 +79,17 @@ public class PaymentsController : Controller
 
         try
         {
+            bool exists = await _context.Payments
+                    .AnyAsync(p => p.Title == payment.Title &&
+                   p.Category == payment.Category);
+
+            if (exists)
+            {
+                ModelState.AddModelError("", "A payment with the same Title and Category already exists.");
+                return View(payment);
+            }
+
+
             _context.Update(payment);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
